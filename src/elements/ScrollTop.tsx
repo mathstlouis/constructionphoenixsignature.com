@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-interface Cursor {
-  x: number;
-  y: number;
-}
 const ScrollTop = () => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
   const { pathname } = useLocation();
