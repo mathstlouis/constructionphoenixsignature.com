@@ -7,7 +7,7 @@ const Services = () => {
       <section className="content-inner">
         <div className="container">
           <div className="row">
-            {ServicesArr.map(({ img, title, icon }, ind) => (
+            {ServicesArr.map(({ icon }, ind) => (
               <div className="col-lg-4 col-md-6 aos-item" key={ind}>
                 <div
                   className="icon-bx-wraper style-1 m-b30"
