@@ -27,15 +27,7 @@ const Footer = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-7 text-start">
                 <span className="copyright-text">
-                  Copyright © 2023{" "}
-                  <Link
-                    to="https://dexignzone.com/"
-                    className="text-primary"
-                    target="_blank"
-                  >
-                    DexignZone
-                  </Link>{" "}
-                  All rights reserved.
+                  Copyright © 2024 Construction Phoenix Signature
                 </span>
               </div>
               <div className="col-lg-6 col-md-5 text-end">
