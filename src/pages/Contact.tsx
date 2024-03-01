@@ -1,10 +1,6 @@
-import CommonBanner from "../elements/CommonBanner";
-import { IMAGES } from "../elements/theme";
-
 const Contact = () => {
   return (
     <div className="page-content bg-white">
-      <CommonBanner img={IMAGES.bnr3} title="CONTACT US" text="Contact Us" />
       <section className="content-inner-2 line-img">
         <div className="container">
           <div className="row align-items-center">
@@ -28,7 +24,7 @@ const Contact = () => {
                         type="text"
                         className="form-control"
                         name="dzFirstName"
-                        placeholder="First Name"
+                        placeholder="Prénom"
                       />
                     </div>
                   </div>
@@ -38,7 +34,7 @@ const Contact = () => {
                         type="text"
                         className="form-control"
                         name="dzLastName"
-                        placeholder="Last Name"
+                        placeholder="Nom"
                       />
                     </div>
                   </div>
@@ -48,7 +44,7 @@ const Contact = () => {
                         type="text"
                         className="form-control"
                         name="dzEmail"
-                        placeholder="Email"
+                        placeholder="Courriel"
                       />
                     </div>
                   </div>
@@ -58,7 +54,7 @@ const Contact = () => {
                         type="text"
                         className="form-control"
                         name="dzPhoneNumber"
-                        placeholder="Phone No."
+                        placeholder="Téléphone"
                       />
                     </div>
                   </div>
@@ -68,7 +64,7 @@ const Contact = () => {
                         type="text"
                         className="form-control"
                         name="dzOther[subject]"
-                        placeholder="Subject"
+                        placeholder="Sujet"
                       />
                     </div>
                   </div>
@@ -99,7 +95,7 @@ const Contact = () => {
                       value="submit"
                       className="btn btn-primary"
                     >
-                      SUBSCRIBE NOW <i className="m-l10 fas fa-caret-right"></i>
+                      Envoyer <i className="m-l10 fas fa-caret-right"></i>
                     </button>
                   </div>
                 </div>
@@ -115,8 +111,8 @@ const Contact = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <h4 className="tilte m-b10">Call Now</h4>
-                      <p className="m-b0">+91 123 456 7890, +91 987 654 3210</p>
+                      <h4 className="tilte m-b10">Téléphone</h4>
+                      <p className="m-b0">(418) 934-6815</p>
                     </div>
                   </div>
                 </div>
@@ -128,39 +124,14 @@ const Contact = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <h4 className="tilte m-b10">Location</h4>
-                      <p className="m-b0">info@gmail.com, services@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-12 m-b30">
-                  <div className="icon-bx-wraper style-8 bg-white">
-                    <div className="icon-md m-r20">
-                      <span className="icon-cell text-primary">
-                        <i className="flaticon-placeholder"></i>
-                      </span>
-                    </div>
-                    <div className="icon-content">
-                      <h4 className="tilte m-b10">Email Now</h4>
-                      <p className="m-b0">15/B Miranda House, New York, US</p>
+                      <h4 className="tilte m-b10">Courriel</h4>
+                      <p className="m-b0">info@constructionphoenixsignature.com</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="content-inner-1 line-img">
-        <div className="container">
-          <div className="section-head style-1 text-center">
-            <h2 className="title">
-              WE ARE <span className="text-primary">WORLDWIDE</span>
-            </h2>
-            <div className="dz-separator style-1 text-primary"></div>
-          </div>
-          <img src={IMAGES.map_img} alt="" />
         </div>
       </section>
     </div>

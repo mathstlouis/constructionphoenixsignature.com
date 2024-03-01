@@ -1,9 +1,8 @@
-import { useEffect, useReducer, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { MenuList, MenuList2 } from "../elements/MenuArr";
-import { HeaderSocialIcon } from "../elements/JsonData";
-import { IMAGES } from "../elements/theme";
+import {useContext, useEffect, useReducer, useState} from "react";
+import {Link, useLocation} from "react-router-dom";
+import {MenuList, MenuList2} from "../elements/MenuArr";
+import {HeaderSocialIcon} from "../elements/JsonData";
+import {Context} from "../context/contextApi.tsx";
 
 const reducer = (previousState: Element, updatedState: any) => {
   return {
@@ -19,28 +18,30 @@ const initialState = {
 const Menu = () => {
   const location = useLocation();
   const [menuactive, setMenuactive] = useState("");
+  const { setSidebarShow } = useContext(Context);
 
   const [state, setState] = useReducer(reducer, initialState);
   const menuHandler = (status: string) => {
     setState({ activeSubmenu: status });
+    setSidebarShow(false);
     if (state.activeSubmenu === status) {
       setState({ activeSubmenu: "" });
     }
   };
 
   useEffect(() => {
-    MenuList.map((item) => {
-      item.child?.map((data) => {
+    MenuList.map((item: any) => {
+      item.child?.map((data: any) => {
         if (data.to === location.pathname) {
           setMenuactive(item.menu);
         }
       });
     });
-    MenuList2.map((item) => {
+    MenuList2.map((item: any) => {
       if (item?.to === location.pathname) {
         setMenuactive(item.menu);
       }
-      item.child?.map((data) => {
+      item.child?.map((data: any) => {
         if (data?.to === location.pathname) {
           setMenuactive(item.menu);
         }
@@ -50,13 +51,8 @@ const Menu = () => {
 
   return (
     <>
-      <div className="logo-header logo-dark">
-        <Link to="/">
-          <img src={IMAGES.logo} alt="" />
-        </Link>
-      </div>
       <ul className="nav navbar-nav navbar navbar-left">
-        {MenuList.map((item, ind) => {
+        {MenuList.map((item: any, ind: number) => {
           const { menu, child, className } = item;
           if (className === "menu-down") {
             return (
@@ -77,7 +73,7 @@ const Menu = () => {
                     {menu}
                   </Link>
                   <ul className="sub-menu">
-                    {child?.map((data, index) => (
+                    {child?.map((data: any, index: number) => (
                         <li key={index}>
                           <Link to={data.to}>{data.children}</Link>
                         </li>
@@ -88,14 +84,16 @@ const Menu = () => {
           } else {
             return (
                 <li key={ind}>
-                  <Link to={`${item?.to}`}>{item.menu}</Link>
+                  <Link onClick={() => {
+                    setSidebarShow(false);
+                  }} to={`${item?.to}`}>{item.menu}</Link>
                 </li>
             );
           }
         })}
       </ul>
       <ul className="nav navbar-nav navbar navbar-right">
-        {MenuList2.map((item, ind) => {
+        {MenuList2.map((item: any, ind: number) => {
           const { menu, child, className } = item;
           if (className === "menu-down") {
             return (
@@ -116,7 +114,7 @@ const Menu = () => {
                   {menu}
                 </Link>
                 <ul className="sub-menu">
-                  {child?.map((data, index) => (
+                  {child?.map((data: any, index: number) => (
                     <li key={index}>
                       <Link to={data.to}>{data.children}</Link>
                     </li>
@@ -127,7 +125,9 @@ const Menu = () => {
           } else {
             return (
               <li key={ind}>
-                <Link to={`${item?.to}`}>{item.menu}</Link>
+                <Link onClick={() => {
+                  setSidebarShow(false);
+                }} to={`${item?.to}`}>{item.menu}</Link>
               </li>
             );
           }

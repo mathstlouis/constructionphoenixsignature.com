@@ -17,7 +17,7 @@ import Team from "./pages/Team";
 import ComingSoon from "./pages/ComingSoon";
 import UnderConstruct from "./pages/UnderConstruct";
 import Error404 from "./pages/Error404";
-import Portfolio from "./pages/Portfolio";
+import Realisations from "./pages/Realisations.tsx";
 import PortfolioDetails from "./pages/PortfolioDetails";
 import Services from "./pages/Services";
 import ServicesDetail from "./pages/ServicesDetail";
@@ -47,12 +47,12 @@ const elementRoutes = [
   { routerLink: "/about-us", elements: <AboutUs /> },
   { routerLink: "/team", elements: <Team /> },
   { routerLink: "/error-404", elements: <Error404 /> },
-  { routerLink: "/portfolio", elements: <Portfolio /> },
+  { routerLink: "/realisations", elements: <Realisations /> },
   { routerLink: "/portfolio-details", elements: <PortfolioDetails /> },
   { routerLink: "/services", elements: <Services /> },
   { routerLink: "/services-details", elements: <ServicesDetail /> },
   { routerLink: "/blog-grid", elements: <BlogGrid /> },
-  { routerLink: "/contact-us", elements: <Contact /> },
+  { routerLink: "/contact", elements: <Contact /> },
   { routerLink: "/blog-large-left-sidebar", elements: <BlogLargLeftSidebar /> },
   { routerLink: "/blog-list-left-sidebar", elements: <BlogListLeftSidebar /> },
   { routerLink: "/blog-details", elements: <BlogDetail /> },
@@ -73,7 +73,7 @@ function App() {
               ))}
             </Route>
 
-            <Route path="/coming-soon" element={<ComingSoon />} />
+            <Route path="/realisations" element={<ComingSoon />} />
             <Route path="/under-construct" element={<UnderConstruct />} />
 
             <Route element={<Layout2 />}>

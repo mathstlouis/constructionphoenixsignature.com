@@ -19,7 +19,7 @@ const PortfolioDetails = () => {
       <CommonBanner
         img={IMAGES.bnr1}
         title="PORTFOLIO DETAIL"
-        text="Portfolio"
+        text="Realisations"
       />
       <LightGallery
         elementClassNames="content-inner port-detail lightgallery line-img"

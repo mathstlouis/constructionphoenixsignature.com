@@ -7,7 +7,8 @@ import { Context } from "../context/contextApi";
 const Header = () => {
   const { setShow } = useContext(Context);
   const [headerfix, setHeaderfix] = useState<number>(0);
-  const [sidebarShow, setSidebarShow] = useState<boolean>(false);
+  const { sidebarShow } = useContext(Context);
+  const { setSidebarShow } = useContext(Context);
 
   const FixesHeader = () => {
     setHeaderfix(window.scrollY);

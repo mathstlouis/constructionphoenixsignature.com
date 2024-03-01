@@ -7,6 +7,8 @@ import React, {
 } from "react";
 
 interface AppContextValue {
+  sidebarShow: boolean;
+  setSidebarShow: Dispatch<SetStateAction<boolean>>;
   show: boolean;
   setShow: Dispatch<SetStateAction<boolean>>;
   modabox: boolean;
@@ -20,6 +22,8 @@ interface AppContextValue {
 }
 
 const defaultState: AppContextValue = {
+  sidebarShow: false,
+  setSidebarShow: () => {},
   show: false,
   setShow: () => {},
   modabox: false,
@@ -46,6 +50,7 @@ export const AppContextProvider: React.FC<AppContextProviderProps> = ({
   const [searchbox, setSearchbox] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const [switcheData, setSwitcheData] = useState({});
+  const [sidebarShow, setSidebarShow] = useState<boolean>(false);
 
   const contextValue: AppContextValue = {
     show,
@@ -58,6 +63,8 @@ export const AppContextProvider: React.FC<AppContextProviderProps> = ({
     setSidebar,
     switcheData,
     setSwitcheData,
+    sidebarShow,
+    setSidebarShow,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
