@@ -103,6 +103,7 @@ const Header = () => {
             </div>
             <div className="sidebar-menu">
               <div
+                style={{visibility: "hidden"}}
                 className="menu-btn navicon"
                 onClick={() => {
                   setSidebar(true);

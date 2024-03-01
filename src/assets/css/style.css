@@ -19178,7 +19178,7 @@ ul a.rsswidget:hover {
   bottom: 0;
   background-color: #f8f8f8;
   width: 50%;
-  padding: 80px;
+  padding: 40px;
 }
 @media only screen and (max-width: 1680px) {
   .silder-one .silder-content {
@@ -19301,7 +19301,7 @@ ul a.rsswidget:hover {
     width: auto;
     left: 15px;
     right: 15px;
-    bottom: 90px;
+    bottom: 30px;
     padding: 20px;
   }
   .silder-one .silder-content .title {
