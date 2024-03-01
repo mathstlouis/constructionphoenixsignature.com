@@ -56,30 +56,43 @@ const Menu = () => {
         </Link>
       </div>
       <ul className="nav navbar-nav navbar navbar-left">
-        {MenuList.map((item, ind) => (
-          <li
-            className={`sub-menu-down ${menuactive == item.menu ? "active" : ""}
-              ${state.activeSubmenu === item.menu ? "open" : ""}
-            `}
-            key={ind}
-          >
-            <Link
-              to="#"
-              onClick={() => {
-                menuHandler(item.menu);
-              }}
-            >
-              {item.menu}
-            </Link>
-            <ul className="sub-menu">
-              {item.child?.map((data, index) => (
-                <li key={index}>
-                  <Link to={data.to}>{data.children}</Link>
+        {MenuList.map((item, ind) => {
+          const { menu, child, className } = item;
+          if (className === "menu-down") {
+            return (
+                <li
+                    className={`sub-menu-down ${
+                        menuactive == item.menu ? "active" : ""
+                    }
+                ${state.activeSubmenu === item.menu ? "open" : ""}
+                `}
+                    key={ind}
+                >
+                  <Link
+                      to="#"
+                      onClick={() => {
+                        menuHandler(item.menu);
+                      }}
+                  >
+                    {menu}
+                  </Link>
+                  <ul className="sub-menu">
+                    {child?.map((data, index) => (
+                        <li key={index}>
+                          <Link to={data.to}>{data.children}</Link>
+                        </li>
+                    ))}
+                  </ul>
                 </li>
-              ))}
-            </ul>
-          </li>
-        ))}
+            );
+          } else {
+            return (
+                <li key={ind}>
+                  <Link to={`${item?.to}`}>{item.menu}</Link>
+                </li>
+            );
+          }
+        })}
       </ul>
       <ul className="nav navbar-nav navbar navbar-right">
         {MenuList2.map((item, ind) => {

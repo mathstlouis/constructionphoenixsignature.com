@@ -1,17 +1,8 @@
 export const MenuList = [
-  {
-    menu: "Home",
-    child: [
-      { children: "Home 1", to: "/" },
-      { children: "Home 2", to: "/home-2" },
-      { children: "Home 3", to: "/home-3" },
-      { children: "Home 4", to: "/home-4" },
-      { children: "Home 5", to: "/home-5" },
-      { children: "Home 6", to: "/home-6" },
-    ],
-  },
+  { menu: "Accueil", to: "/" },
   {
     menu: "Pages",
+    className: "menu-down",
     child: [
       { children: "About Us", to: "/about-us" },
       { children: "Team", to: "/team" },
@@ -22,6 +13,7 @@ export const MenuList = [
   },
   {
     menu: "Portfolio",
+    className: "menu-down",
     child: [
       { children: "Portfolio", to: "/portfolio" },
       { children: "Portfolio Details", to: "/portfolio-details" },
