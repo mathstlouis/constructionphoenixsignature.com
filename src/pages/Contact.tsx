@@ -5,6 +5,7 @@ const Contact = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-6 col-lg-6 m-b30">
+              <div className="mb-3">Veuillez remplir le formulaire suivant pour nous envoyer un message</div>
               <form
                 className="dz-form style-1 dzForm radius-no"
                 method="POST"

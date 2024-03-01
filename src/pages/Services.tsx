@@ -4,35 +4,18 @@ import {ServicesArr} from "../elements/JsonData";
 const Services = () => {
   return (
     <div className="page-content bg-white">
-      <section className="content-inner line-img">
+      <section className="content-inner">
         <div className="container">
           <div className="row">
             {ServicesArr.map(({ img, title, icon }, ind) => (
               <div className="col-lg-4 col-md-6 aos-item" key={ind}>
                 <div
-                  className="icon-bx-wraper style-1 m-b30 flip-bx"
+                  className="icon-bx-wraper style-1 m-b30"
                   data-name="1."
                 >
-                  <div
-                    className="front overlay-black-middle"
-                    style={{ backgroundImage: `url(${img})` }}
-                  >
-                    <div className="inner">
-                      <div>
-                        <div className="sep-tl"></div>
-                        <div className="sep-br"></div>
-                        <h4 className="title m-b10">{title}</h4>
-                        <h6 className="sub-title text-primary">
-                          WE DESIGN IDEAS
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
                   <div className="back">
                     <div className="inner">
                       <div>
-                        <div className="sep-tl"></div>
-                        <div className="sep-br"></div>
                         <div className="icon-lg">
                           <span className="icon-cell text-primary">
                             <i className={icon}></i>
