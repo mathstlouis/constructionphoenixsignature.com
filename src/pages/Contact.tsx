@@ -1,4 +1,33 @@
+import {useState} from "react";
+
 const Contact = () => {
+
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Envoi en cours");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "c49708ae-61ec-405a-bb17-886833d1d4e8");
+    formData.append("subject", "Nouvel envoi sur constructionphoenixsignature.com");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Formulaire envoyé avec succès");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <div className="page-content bg-white">
       <section className="content-inner-2 line-img">
@@ -7,100 +36,82 @@ const Contact = () => {
             <div className="col-xl-6 col-lg-6 m-b30">
               <div className="mb-3">Veuillez remplir le formulaire suivant pour nous envoyer un message</div>
               <form
-                className="dz-form style-1 dzForm radius-no"
-                method="POST"
-                action="script/contact_smtp.php"
+                  onSubmit={onSubmit}
               >
-                <input
-                  type="hidden"
-                  className="form-control"
-                  name="dzToDo"
-                  value="Contact"
-                />
-                <div className="dzFormMsg"></div>
                 <div className="row sp10">
                   <div className="col-sm-6 m-b20">
                     <div className="input-group">
                       <input
-                        type="text"
-                        className="form-control"
-                        name="dzFirstName"
-                        placeholder="Prénom"
+                          type="text"
+                          className="form-control"
+                          name="dzFirstName"
+                          placeholder="Prénom"
                       />
                     </div>
                   </div>
                   <div className="col-sm-6 m-b20">
                     <div className="input-group">
                       <input
-                        type="text"
-                        className="form-control"
-                        name="dzLastName"
-                        placeholder="Nom"
+                          type="text"
+                          className="form-control"
+                          name="dzLastName"
+                          placeholder="Nom"
                       />
                     </div>
                   </div>
                   <div className="col-sm-6 m-b20">
                     <div className="input-group">
                       <input
-                        type="text"
-                        className="form-control"
-                        name="dzEmail"
-                        placeholder="Courriel"
+                          type="email"
+                          className="form-control"
+                          name="email"
+                          placeholder="Courriel"
                       />
                     </div>
                   </div>
+                  <input type="checkbox" name="botcheck" id="" style={{display: 'none'}}/>
                   <div className="col-sm-6 m-b20">
                     <div className="input-group">
                       <input
-                        type="text"
-                        className="form-control"
-                        name="dzPhoneNumber"
-                        placeholder="Téléphone"
+                          type="text"
+                          className="form-control"
+                          name="dzPhoneNumber"
+                          placeholder="Téléphone"
                       />
                     </div>
                   </div>
                   <div className="col-sm-12 m-b20">
                     <div className="input-group">
                       <input
-                        type="text"
-                        className="form-control"
-                        name="dzOther[subject]"
-                        placeholder="Sujet"
+                          type="text"
+                          className="form-control"
+                          name="dzOther[subject]"
+                          placeholder="Sujet"
                       />
                     </div>
                   </div>
                   <div className="col-sm-12 m-b20">
                     <div className="input-group">
                       <textarea
-                        name="dzMessage"
-                        className="form-control"
-                        placeholder="Message"
+                          name="dzMessage"
+                          className="form-control"
+                          placeholder="Message"
                       ></textarea>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 m-b20">
-                    <div className="input-group">
-                      <div className="g-recaptcha"></div>
-                      <input
-                        className="form-control d-none"
-                        style={{ display: "none" }}
-                        data-recaptcha="true"
-                        data-error="Please complete the Captcha"
-                      />
                     </div>
                   </div>
                   <div className="col-sm-12">
                     <button
-                      name="submit"
-                      type="button"
-                      value="submit"
-                      className="btn btn-primary"
+                        name="submit"
+                        type="submit"
+                        value="submit"
+                        className="btn btn-primary"
                     >
                       Envoyer <i className="m-l10 fas fa-caret-right"></i>
                     </button>
                   </div>
                 </div>
               </form>
+              <div className="pt-2">{result}</div>
             </div>
             <div className="col-xl-6 col-lg-6">
               <div className="row">
@@ -126,7 +137,7 @@ const Contact = () => {
                     </div>
                     <div className="icon-content">
                       <h4 className="tilte m-b10">Courriel</h4>
-                      <p className="m-b0">info@constructionphoenixsignature.com</p>
+                      <p className="m-b0 text-break">info@constructionphoenixsignature.com</p>
                     </div>
                   </div>
                 </div>
