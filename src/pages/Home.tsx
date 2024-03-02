@@ -15,7 +15,7 @@ const Home = () => {
     <>
     <Helmet>
       <title>Construction Phoenix Signature - Accueil</title>
-      <meta name="description" content="Page d'accueil du site Construction Phoenix Signature" />
+      <meta name="description" content="Page d'accueil du site Construction Phoenix Signature - Jean-François Dorval entrepreneur" />
       <meta property="og:site_name" content="Construction Phoenix Signature" />
       <meta property="og:locale" content="fr_CA" />
     </Helmet>
