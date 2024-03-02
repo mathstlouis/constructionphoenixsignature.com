@@ -4,7 +4,7 @@ const Contact = () => {
 
   const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: any) => {
     event.preventDefault();
     setResult("Envoi en cours");
     const formData = new FormData(event.target);
@@ -44,7 +44,7 @@ const Contact = () => {
                       <input
                           type="text"
                           className="form-control"
-                          name="dzFirstName"
+                          name="Prénom"
                           placeholder="Prénom"
                       />
                     </div>
@@ -54,7 +54,7 @@ const Contact = () => {
                       <input
                           type="text"
                           className="form-control"
-                          name="dzLastName"
+                          name="Nom"
                           placeholder="Nom"
                       />
                     </div>
@@ -64,7 +64,7 @@ const Contact = () => {
                       <input
                           type="email"
                           className="form-control"
-                          name="email"
+                          name="Courriel"
                           placeholder="Courriel"
                       />
                     </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                       <input
                           type="text"
                           className="form-control"
-                          name="dzPhoneNumber"
+                          name="Téléphone"
                           placeholder="Téléphone"
                       />
                     </div>
@@ -85,7 +85,7 @@ const Contact = () => {
                       <input
                           type="text"
                           className="form-control"
-                          name="dzOther[subject]"
+                          name="Sujet"
                           placeholder="Sujet"
                       />
                     </div>
@@ -93,7 +93,7 @@ const Contact = () => {
                   <div className="col-sm-12 m-b20">
                     <div className="input-group">
                       <textarea
-                          name="dzMessage"
+                          name="Message"
                           className="form-control"
                           placeholder="Message"
                       ></textarea>
