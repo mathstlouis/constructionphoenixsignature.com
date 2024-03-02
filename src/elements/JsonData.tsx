@@ -2,9 +2,6 @@ import { IMAGES } from "./theme";
 
 export const HeaderSocialIcon = [
   { icon: "fab fa-facebook-f" },
-  { icon: "fab fa-twitter" },
-  { icon: "fab fa-linkedin-in" },
-  { icon: "fab fa-instagram" },
 ];
 
 export const MainSliderArr = [
