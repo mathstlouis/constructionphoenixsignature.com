@@ -101,9 +101,7 @@ const Contact = () => {
                   </div>
                   <div className="col-sm-12">
                     <button
-                        name="submit"
                         type="submit"
-                        value="submit"
                         className="btn btn-primary"
                     >
                       Envoyer <i className="m-l10 fas fa-caret-right"></i>
