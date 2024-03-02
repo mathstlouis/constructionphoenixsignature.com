@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Helmet} from "react-helmet";
 
 const Contact = () => {
 
@@ -29,6 +30,13 @@ const Contact = () => {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>Construction Phoenix Signature - Contact</title>
+        <meta name="description" content="Entrer en contact avec Construction Phoenix Signature" />
+        <meta property="og:site_name" content="Construction Phoenix Signature" />
+        <meta property="og:locale" content="fr_CA" />
+      </Helmet>
     <div className="page-content bg-white">
       <section className="content-inner-2 line-img">
         <div className="container">
@@ -145,6 +153,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,8 +1,16 @@
 import {Link} from "react-router-dom";
 import {ServicesArr} from "../elements/JsonData";
+import {Helmet} from "react-helmet";
 
 const Services = () => {
   return (
+    <>
+    <Helmet>
+        <title>Construction Phoenix Signature - Nos Services</title>
+        <meta name="description" content="Consulter les services offerts par Construction Phoenix Signature" />
+        <meta property="og:site_name" content="Construction Phoenix Signature" />
+        <meta property="og:locale" content="fr_CA" />
+    </Helmet>
     <div className="page-content bg-white">
       <section className="content-inner">
         <div className="container">
@@ -40,6 +48,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

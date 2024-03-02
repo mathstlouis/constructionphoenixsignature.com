@@ -5,11 +5,19 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import {HomeGalleryArr} from "../elements/JsonData";
 import {useState} from "react";
+import {Helmet} from "react-helmet";
 
 const Realisations = () => {
   const [data] = useState(HomeGalleryArr);
 
   return (
+    <>
+    <Helmet>
+        <title>Construction Phoenix Signature - Nos Réalisations</title>
+        <meta name="description" content="Voir les réalisations et travaux effectués par Construction Phoenix Signature" />
+        <meta property="og:site_name" content="Construction Phoenix Signature" />
+        <meta property="og:locale" content="fr_CA" />
+    </Helmet>
     <div className="page-content bg-white">
       <section className="content-inner-1 line-img overflow-hidden masonry-portfolio">
         <LightGallery
@@ -125,6 +133,7 @@ const Realisations = () => {
         </LightGallery>
       </section>
     </div>
+    </>
   );
 };
 
