@@ -41,6 +41,7 @@ const Contact = () => {
       <section className="content-inner-2 line-img">
         <div className="container">
           <div className="row align-items-center">
+            <h1>Nous contacter</h1>
             <div className="col-xl-6 col-lg-6 m-b30">
               <div className="mb-3">Veuillez remplir le formulaire suivant pour nous envoyer un message</div>
               <form

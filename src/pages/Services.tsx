@@ -12,9 +12,10 @@ const Services = () => {
         <meta property="og:locale" content="fr_CA" />
     </Helmet>
     <div className="page-content bg-white">
-      <section className="content-inner">
+      <section className="content-inner line-img">
         <div className="container">
           <div className="row">
+            <h1>Nos services</h1>
             {ServicesArr.map(({ icon }, ind) => (
               <div className="col-lg-4 col-md-6 aos-item" key={ind}>
                 <div
