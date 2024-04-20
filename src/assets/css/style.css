@@ -23552,12 +23552,12 @@ pre {
 }
 @media only screen and (max-width: 991px) {
   .navbar-toggler {
-    margin: 20px 0 20px 15px;
+    margin: 60px 6px 20px 15px;
   }
 }
 @media only screen and (max-width: 575px) {
   .navbar-toggler {
-    margin: 20px 0 20px 15px;
+    margin: 40px 6px 20px 15px;
   }
 }
 
