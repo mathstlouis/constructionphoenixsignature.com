@@ -37,9 +37,6 @@ const MainSlider = () => {
                 <h1 className="title">
                   <span className="text-primary">Bienvenue chez</span> <br/> Construction Phoenix Signature
                 </h1>
-                <p className="m-b30">
-                  Ici on sait définitivement installer des moulures Ogee depuis plus de 10 ans.
-                </p>
               </div>
             </div>
           </SwiperSlide>

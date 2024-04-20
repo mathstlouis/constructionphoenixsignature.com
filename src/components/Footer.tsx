@@ -27,13 +27,13 @@ const Footer = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-7 text-start">
                 <span className="copyright-text">
-                  Copyright © 2024 Construction Phoenix Signature
+                  Copyright © 2024 Construction Phoenix Signature RBQ&nbsp;5847-8348-01
                 </span>
               </div>
               <div className="col-lg-6 col-md-5 text-end">
                 <ul className="social-list style-1">
                   <li>
-                    <Link to="#">
+                    <Link to="https://www.facebook.com/people/Construction-Phoenix-Signature/61557705460866">
                       <i className="fab fa-facebook-f"></i>
                     </Link>
                   </li>
