@@ -19176,13 +19176,14 @@ ul a.rsswidget:hover {
   position: absolute;
   left: 0;
   bottom: 0;
+  margin-bottom: 40px;
   background-color: #f8f8f8;
   width: 50%;
   padding: 40px;
 }
 @media only screen and (max-width: 1680px) {
   .silder-one .silder-content {
-    padding: 40px;
+    padding: 60px;
   }
 }
 .silder-one .silder-content .title {
