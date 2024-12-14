@@ -10,7 +10,7 @@ const Contact = () => {
     setResult("Envoi en cours");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "c49708ae-61ec-405a-bb17-886833d1d4e8");
+    formData.append("access_key", "adb73c97-8e27-44cf-aea2-113ff9f9a847");
     formData.append("subject", "Nouvel envoi sur constructionphoenixsignature.com");
 
     const response = await fetch("https://api.web3forms.com/submit", {

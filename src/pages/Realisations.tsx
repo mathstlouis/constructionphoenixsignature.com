@@ -1,14 +1,7 @@
-import {Link} from "react-router-dom";
-import {Swiper, SwiperSlide} from "swiper/react";
-import LightGallery from "lightgallery/react";
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
-import {HomeGalleryArr} from "../elements/JsonData";
-import {useState} from "react";
 import {Helmet} from "react-helmet";
 
 const Realisations = () => {
-  const [data] = useState(HomeGalleryArr);
+  //const [data] = useState(HomeGalleryArr);
 
   return (
     <>
@@ -22,7 +15,9 @@ const Realisations = () => {
         <section className="content-inner-1 line-img overflow-hidden masonry-portfolio">
             <div className="container">
                 <h1>Nos réalisations</h1>
-                <LightGallery
+
+                <p>Nous travaillons activement à plusieurs projets. Nos réalisations seront présentées très bientôt.</p>
+  {/*              <LightGallery
                     speed={500}
                     plugins={[lgThumbnail, lgZoom]}
                     selector={".lightimg"}
@@ -132,7 +127,8 @@ const Realisations = () => {
                             }
                         })}
                     </Swiper>
-                </LightGallery></div>
+                </LightGallery>*/}
+            </div>
         </section>
     </div>
     </>

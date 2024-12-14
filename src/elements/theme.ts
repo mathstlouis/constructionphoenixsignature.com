@@ -7,7 +7,7 @@ import logo_white4 from "../assets/images/logo-white-4.png";
 import logo5 from "../assets/images/logo-5.png";
 import logo_white5 from "../assets/images/logo-white-5.png";
 import modalimg from "../assets/images/img1.jpg";
-import mainslid_pic1 from "../assets/images/main-slider/pic1.png";
+import mainslid_pic1 from "../assets/images/main-slider/douche.jpg";
 import mainslid_pic2 from "../assets/images/main-slider/pic2.jpg";
 import about_pic1 from "../assets/images/about/pic1.jpg";
 import about_pic2 from "../assets/images/about/pic2.jpg";

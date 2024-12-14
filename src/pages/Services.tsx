@@ -16,7 +16,7 @@ const Services = () => {
         <div className="container">
           <div className="row">
             <h1>Nos services</h1>
-            {ServicesArr.map(({ icon }, ind) => (
+            {ServicesArr.map(({ icon, title }, ind) => (
               <div className="col-lg-4 col-md-6 aos-item" key={ind}>
                 <div
                   className="icon-bx-wraper style-1 m-b30"
@@ -32,19 +32,17 @@ const Services = () => {
                         </div>
                         <h4 className="title m-b15">
                           <Link to="/services-details" className="text-white">
-                            Interior Design
+                              {title}
                           </Link>
                         </h4>
-                        <p>
-                          Quisque vel condimentum dolor, vitae luctus lacus.
-                          Integer finibus arcu non ultrices rhoncus.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
+              <p>Peu importe vos besoins, Jean-François Dorval de l'équipe de Construction Phoenix Signature saura vous guider.
+              N'hésitez-pas à nous contacter dès maintenant pour une soumission ou si vous avez des questions.</p>
           </div>
         </div>
       </section>
