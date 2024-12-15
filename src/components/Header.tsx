@@ -25,9 +25,7 @@ const Header = () => {
   return (
     <header className="site-header mo-left header center style-1">
       <div
-        className={`sticky-header main-bar-wraper navbar-expand-lg ${
-          headerfix > 50 ? "is-fixed" : ""
-        }`}
+        className={`sticky-header main-bar-wraper navbar-expand-lg`}
       >
         <div className="main-bar clearfix ">
           <div className="container-fluid clearfix">
